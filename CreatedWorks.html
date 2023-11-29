@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indy's Portfolio</title>
+    <style>
+       
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+    </style>
+
+
 </head>
 <body>
  <div id="content"
@@ -28,53 +80,67 @@
  </header>
  <main>
 <h1>My Works</h1>
-<section class="playlist-mag">
-    <img class="playlist-mag-img" src="images/playlistmag.png" alt="'fake mag cover">
-    <h2>Magazine Cover</h2>
-    <p>This is a magazine cover I had to create using photoshop. I edited the photo, getting rid of any blemishes, brightening the skin, came up with the title,sub title, the quotes in the red boxes, song names, all of it. I am super happy with how this turned out. I can honestly say it's one of favorite pieces I've done! </p>
-    </section>
 
-<section class="planetscape">
-    <img class="planetscape-img" src="images/planetscape.png" alt="'planets">
-    <h2>Planet Scape</h2>
-   <p>This is a piece that I made using photoshop. I really enjoyed making all the details in this project. From the space dust, to the planet rings, it all was really fun to make. </p> 
-    </section>
 
-<section class="takeoutmenuone">
-    <img class="takeout-menu-img" src="images/takeoutmenuone.png" alt=" chinese takeout menu">
-    <section class="takeoutmenutwo">
-        <img class="takeout-menu-img" src="images/takeoutmentutwo.png" alt="chinese takeout menu">
-    </section>
-        <h2>Chinse Takeout Menu</h2>
-    <p>This is a take-out menu I had to create for a project! It was probably one the most challenging projects I had to do because there was SO MUCH text! I am really proud of how it turned out and I am happy to share it with you! </p>
-    </section>
-
-<section class="event-poster">
-    <img class="event-poster-img" src="images/Griffitts_EventPoster.jpg" alt="'muse poster">
-    <p>This is a event poster I had to make in photoshop as well, utilizing the clipping mask tool. This is a redo of a previous project from a different class that I decided to redo. I'm really happy with how this came out. Using the clipping mask is one of tools that is so useful in so many ways. I loved making this poster</p>
-    <h2>Event Poster</h2>
-    </section>
-
-<section class="gordybabyshower">
-    <img class="gordy-baby-shower-img" src="images/gordybabyshower.png" alt="baby shower invitation">
-        <h2>Baby Shower Invite</h2>
-    <p>This ia my sisters baby shower invitation! I was asked if I could make one, and this is what the result! I loved the color scheme she picked, and the layout! It come together nicely!</p>
-    </section>
+<div style="text-align:center">
+    <h2>Tabbed Image Gallery</h2>
+    <p>Click on the images below:</p>
+  </div>
   
-<section class="loransprogramone">
-    <img class="lorans-program-img" src="images/loransprogramone.png" alt="papas funeral program">
-    <section class="loransprogramtwo">
-        <img class="lorans-program-two-img" src="images/loransprogramtwo.png" alt="papas funeral program"> 
-    <p>This wasn't a project for school. My grandpa passed away in April of 2022, and I asked if I could make his funeral program. It was an honor to do so, and I'm so glad I got to contribute this to him. Its a Z- fold program</p>
-    <h2>Lorans Funeral Program</h2>
-    </section>
 
-<section class="meyersad">
-    <img class="meyers-ad-img" src="images/meyersad.png" alt="meyers ad remake">
- 
-    <p>This is the full Ad had to re-create. I am really happy with how it all came together! The text (again) was definitely the trickiest part, but it worked out in the end. I'm proud of this Ad redo!</p>
-    <h2>Meyers Ad Remake</h2>
-    </section>
+<div class="row">
+    <div class="column">
+      <img src="images/rsz_playlistmag.png" alt="Nature" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_2rsz_1planetscape.png" alt="Snow" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_2rsz_1rsz_griffitts_eventposter.jpg"   alt="poster" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_meyersad.png" alt="Lights" onclick="myFunction(this);">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/rsz_takeoutmenuone.png" alt="Nature" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_1takeoutmentutwo.png" alt="Snow" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_loransprogramone.png" alt="Mountains" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="images/rsz_loransprogramtwo.png" alt="Lights" onclick="myFunction(this);">
+    </div>
+  </div>
+  <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:100%">
+  
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
+
+   <script>
+    function myFunction(imgs) {
+        var expandingImg = document.getElementById("expandingImg");
+        var imgText = document.getElementById("imgtext");
+        expandingImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandingImg.parentElement.style.display = "block";
+    }
+
+   </script>
+            
+            
+
 
 
  </main>
