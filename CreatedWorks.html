@@ -4,142 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indy's Portfolio</title>
-    <style>
-       
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-  }
-  
+    <body>
+      <div id="content"
+      max-width: 1600px
+      margin: 0>
+     
+      <header>
+         <a id="logo_link" href="index.html">
+             <img class="logo" src="images/personalsitelogo.jpg" alt="Indys logo">
+         </a>
+         <nav>
+             <a href="index.html"> Home</a>
+             <a href="AboutMe.html">About Me</a>
+             <a href="siteplan.html">Site Plan</a>
+             <a href="CreatedWorks.html">Created Works</a>
+         </nav>
+         <div id="indyothree">
+             <div id="indythree-box">
+                 <img id="indythree-img" src="images/indythree.jpg" alt="indy crouched">
 
-  .column img {
-    opacity: 0.8;
-    cursor: pointer;
-  }
-  
-  .column img:hover {
-    opacity: 1;
-  }
-  
+     <style>
+      *{
+        box-sizing: border-box;
+      }
 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+      body{
+        background-color: #CAC4CE;
+        padding: 20px;
+        font-family: inter reg;
+      }
+      .main{
+        max-width: 1000px;
+        margin:auto;
+      }
 
-  .container {
-    position: relative;
-    display: none;
-  }
-  
-
-  #imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-  }
-
-  .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-  }
-
-    </style>
-
-
-</head>
-<body>
- <div id="content"
- max-width: 1600px
- margin: 0>
-
- <header>
-    <a id="logo_link" href="index.html">
-        <img class="logo" src="personalsitelogo.jpg" alt="Indys logo">
-    </a>
-    <nav>
-        <a href="index.html"> Home</a>
-        <a href="AboutMe.html">About Me</a>
-        <a href="siteplan.html">Site Plan</a>
-        <a href="CreatedWorks.html">Created Works</a>
-    </nav>
-    <div id="indythree">
-        <div id="indythree-box">
-            <img id="indythree-img" src="images/indythree.jpg" alt="indy crouched">
-
-
- </header>
- <main>
-<h1>My Works</h1>
-
-
-<div style="text-align:center">
-    <h2>Tabbed Image Gallery</h2>
-    <p>Click on the images below:</p>
-  </div>
-  
-
-<div class="row">
-    <div class="column">
-      <img src="images/rsz_playlistmag.png" alt="Nature" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_2rsz_1planetscape.png" alt="Snow" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_2rsz_1rsz_griffitts_eventposter.jpg"   alt="poster" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_meyersad.png" alt="Lights" onclick="myFunction(this);">
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <img src="images/rsz_takeoutmenuone.png" alt="Nature" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_1takeoutmentutwo.png" alt="Snow" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_loransprogramone.png" alt="Mountains" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/rsz_loransprogramtwo.png" alt="Lights" onclick="myFunction(this);">
-    </div>
-  </div>
-  <!-- The expanding image container -->
-  <div class="container">
-    <!-- Close the image -->
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  
-    <!-- Expanded image -->
-    <img id="expandedImg" style="width:100%">
-  
-    <!-- Image text -->
-    <div id="imgtext"></div>
-  </div>
-
-   <script>
-    function myFunction(imgs) {
-        var expandingImg = document.getElementById("expandingImg");
-        var imgText = document.getElementById("imgtext");
-        expandingImg.src = imgs.src;
-        imgText.innerHTML = imgs.alt;
-        expandingImg.parentElement.style.display = "block";
+      h1{
+        font-size: 50px;
+        word-break: break-all;
+      }
+      .row{
+        margin: 8px -16px;
+      }
+      .row, .row > .column{
+        padding: 8px;
+      }
+      .column{
+        float: left;
+        width: 25%;
+      }
+      .row::after {
+        content:"";
+        display: table;
+        clear:both;
+      }
+      .content{
+        background-color: white;
+        padding:10px;
+      }
+      
+      #logo_link{
+     padding-top: 5px;
+    justify-self: left;
+    align-self: left;
+    }
+    .logo{
+    width: 80px;
+    }
+    nav {
+    display: flex;
+    justify-content: space-around;
+    }
+    nav a{
+   text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 35px;
+    }
+    nav a:hover{
+    background-color: #242038;
+    color:#725AC1;
     }
 
-   </script>
-            
-            
+</style>       
+ </head>
+ <body>
+  
+  <div class="main">
+
+<h1>Created Works</h1>
+<hr>
+
+<h2>Portfolio</h2>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="images/rsz_playlistmag.png" alt="magazine cover" style="width:100%">
+      <h3>Magazine Cover</h3>
+      <p>This a magazine cover I made using photoshop. I edited the photo, getting rid of any blemishes, brightening the photo, etc. This is honestly one of my absolute favorite peices I did.</p>
+  </div>
+</div>
+<div class="column">
+  <div class="content">
+    <img src="images/planetscape.png" alt="planets" style="width:100%">
+    <h3>PlanetScape</h3>
+    <p>This is a project I created in once again, Photoshop! I had a lot of fun learning all the tools and techniques used to make the planets,stars, and rings around the planet.I'm really happy with how this came out!</p>
+</div>
+</div>
+<div class="column">
+  <div class="content">
+    <img src="images/rsz_griffitts_eventposter.jpg" alt="poster" style="width:100%">
+    <h3>Event Poster</h3>
+    <p>This is a poster I re-did in Photoshop! I'm happy with how this turned out; the color scheme, along with the embedded clouds and city really brings it all together.</p>
+</div>
+</div>
+<div class="column">
+  <div class="content">
+    <img src="images/rsz_meyersad.png" alt="adredo" style="width:100%">
+    <h3>Meyers Ad</h3>
+    <p> This is an ad I had to recreate! It was so much fun thinking about how this was done originally, and trying to replicate it! I think it turned out really well!</p>
+  </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="images/takeoutmenuone.png" alt="takeoutmenu" style="width:100%">
+      <h3>Chinese Take-Out Menu</h3>
+      <p>This is a take-out menu I had to create. The most challenging part of making this menu was dealing with the ALL the text. Making sure it was all going to fit, and still be readable! This definitely taught me about being aware of how much space you have to work with, and making sure it all still looks good!</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img src="images/takeoutmentutwo.png" alt="takeoutmentutwo" style="width:100%">
+      <h3>Chinese Take-Out Menu</h3>
+      <p>The back side of the menu</p>
+    </div>
+  </div>
+
 
 
 

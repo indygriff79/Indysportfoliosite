@@ -1,5 +1,5 @@
 body{
-    background-color: #725AC1;
+    background-color: #CAC4CE;
     font-family: bitter, inter reg;
     font-size: 22px;
     margin: 0;
@@ -7,7 +7,7 @@ body{
 }
 
 #logo_link{
-    padding-top: 5px;
+ padding-top: 5px;
 justify-self: left;
 align-self: left;
 }
@@ -39,7 +39,7 @@ nav a:hover{
     grid-template-rows: 5;
 }
 header{
-    background-color: #725AC1;
+    background-color: #CAC4CE;
     color: bLack;
     display: grid;
     justify-self: center;
@@ -47,7 +47,7 @@ header{
 }
 footer{
     background-color:#242038;
-    color:black;
+    color:white;
     padding: 25px 50px;
     margin-top: 200px;
     display: flex;
@@ -68,6 +68,6 @@ footer a:hover{
     color: #725AC1;
 }
 footer a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
